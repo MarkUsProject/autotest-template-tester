@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+settings() {
+  # TODO: add code that prints a json string containing the settings schema for your tester here
+}
+
+[ "$1" = "settings" ] && settings

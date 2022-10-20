@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+install() {
+  # TODO: add code to install the tester here
+}
+
+settings() {
+  # TODO: add code that prints a json string containing the settings schema for your tester here
+}
+
+create_environment() {
+  version=$2 # the language version used by your tester's language
+  requirements=$3 # any package/dependency requirements to install in this environment
+  env_dir=$4 # the location to store the above requirements
+  # TODO: add code that sets up an environment that will be used to run tests. Print a json string containing
+  #       environment variables used to run the process that runs tests in this environment. At minimum, the
+  #       json string should contain the "COMMAND" variable whose value is a shell command that will run tests
+  #       in this environment. For example, this function could print:
+  #          '{"COMMAND": "/some/env/created/here/bin/python /this/dir/tester"}'
+}
+
+[ "$1" = "install" ] && install
+[ "$1" = "settings" ] && settings
+[ "$1" = "create_environment" ] && create_environment "$@"

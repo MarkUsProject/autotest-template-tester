@@ -1,0 +1,6 @@
+# ignore everything
+*
+
+# except ...
+!tester
+# TODO: add additional file exceptions used by your Dockerfile

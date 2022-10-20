@@ -1,0 +1,26 @@
+# Write the actual tester here. This should be an executable that takes test settings as input through stdin,
+# and prints test results to stdout as json in the following format:
+{
+    "test_name": # name of the test,
+    "output": # any additional information provided by the test run (test result output for example),
+    "marks_earned": # the number of marks earned by running this test,
+    "marks_total": # the number of total possible marks that can be earned from running this test,
+    "status": # a status code. One of: "pass", "fail", "partial", "error",
+    "time": # the amount of time in milliseconds it took to run the test (optional)
+}
+
+# This tester can run multiple tests and each test should print a json string formatted as above to stdout.
+# Do not print the json strings in an array, just print them one by one to stdout. For example, a tester should
+# print:
+
+{ "test_name": ... }
+{ "test_name": ... }
+{ "test_name": ... }
+
+# as opposed to:
+
+[
+    { "test_name": ... },
+    { "test_name": ... },
+    { "test_name": ... }
+]
