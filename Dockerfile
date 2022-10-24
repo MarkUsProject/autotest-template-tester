@@ -3,7 +3,7 @@
 ARG VERSION
 ARG REQUIREMENTS
 
-# Add a FROM statement here. For example:
+# TODO: Add a FROM statement here. For example:
 #  FROM python:${VERSION}
 
 ARG REQUIREMENTS

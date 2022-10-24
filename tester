@@ -9,6 +9,23 @@
     "time": # the amount of time in milliseconds it took to run the test (optional)
 }
 
+If this tester generates annotations for the files under test, they should be reported by printing the annotations
+to stdout as json in the following format:
+
+{
+    "annotations": [
+        {
+            "filename": # a relative path (from the root of the test directory) to the file to annotate,
+            "content": # a string containing the content/message of the annotation,
+            "line_start": # an integer indicating which line the annotation starts at (1-indexed),
+            "line_end": # an integer indicating which line the annotation ends at (1-indexed),
+            "column_start": # an integer indicating which character/column the annotation starts at (0-indexed),
+            "column_end", # an integer indicating which character/column the annotation ends at (0-indexed)
+        },
+        ...
+    ]
+}
+
 # This tester can run multiple tests and each test should print a json string formatted as above to stdout.
 # Do not print the json strings in an array, just print them one by one to stdout. For example, a tester should
 # print:
