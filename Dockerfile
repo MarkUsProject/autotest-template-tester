@@ -11,7 +11,11 @@ ARG REQUIREMENTS
 # TODO: fill in the rest of this file to create an image that will run your tests
 
 # An empty /data directory is required by all testers. This is where data volumes will be mounted
-RUN mkdir /data
+# An empty /workspace directory is required by all testers. This is where tests will be run from.
+RUN mkdir /data /workspace
+
+# The workspace must be set to /workdir so that file paths can be resolved predictably.
+WORKDIR /workspace
 
 # The code that runs the tests themselves should be copied or mounted to the image as an executable file at /tester
 COPY --chmod=0744 ./tester /tester

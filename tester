@@ -1,4 +1,4 @@
-# Write the actual tester here. This should be an executable that takes test settings as input through stdin,
+# Write the actual tester here. This should be an executable that takes test settings as a json string sent as an argument to the `tester` script,
 # and prints test results to stdout as json in the following format:
 {
     "test_name": # name of the test,
