@@ -3,4 +3,5 @@
 
 # except ...
 !tester
+!entrypoint.sh
 # TODO: add additional file exceptions used by your Dockerfile

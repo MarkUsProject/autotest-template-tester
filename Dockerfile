@@ -1,7 +1,6 @@
 # The VERSION and REQUIREMENTS arguments will always be passed to the image at build time.
 # Options for these should be set in the settings schema for this tester (returned by running `docker.cli settings`)
 ARG VERSION
-ARG REQUIREMENTS
 
 # TODO: Add a FROM statement here. For example:
 #  FROM python:${VERSION}
@@ -17,5 +16,8 @@ RUN mkdir /data /workspace
 # The workspace must be set to /workdir so that file paths can be resolved predictably.
 WORKDIR /workspace
 
+# The entrypoint script (this should be the same for all testers)
+COPY ./entrypoint.sh /entrypoint.sh
+
 # The code that runs the tests themselves should be copied or mounted to the image as an executable file at /tester
-COPY --chmod=0744 ./tester /tester
+COPY ./tester /tester
